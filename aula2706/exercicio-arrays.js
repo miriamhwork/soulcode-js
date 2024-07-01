@@ -107,10 +107,10 @@ let palavraOriginal = inverterPalavra("Diana");
 
 
 // 9. Escreva uma função que receba uma palavra e um número. Retorne a palavra repetida a quantidade de vezes indicada pelo segundo parâmetro. Exemplo: repetir("batata", 3) -> "batatabatatabatata". OBS: Utilize um loop para resolver.
-function identificarMaiorNum(word, nums) {
+function identificarMaiorNum(aPalavra, qtVezes) {
     let wordRepete = [];
-    for(let i = 0; i < nums; i++) {
-        if (word[i].length < nums) {
+    for(let i = 0; i < qtVezes; i++) {
+        if (aPalavra[i].length < qtVezes) {
             wordRepete.push(word);
         }
     }
@@ -141,18 +141,18 @@ let dataNumeros = [11, 4, 1933];
 console.log(formatarData(dataNumeros));
 
 // 12. Crie uma função que recebe um array, um valor de busca e um valor padrão. Caso o elemento exista no array retorne o elemento, caso contrário retorne o valor padrão definido via parâmetro. Ex: busca(array, 'batata', 'não tem batata') -> 'não tem batata'
-function buscarPalavra(comidas, buscaComida, msgPadrao) {
-    if(comidas.includes(buscaComida)) {
+function buscarPalavra(listas, buscaComida, msgPadrao) {
+    if(listas.includes(buscaComida)) {
         console.log(`Tem ${buscaComida}`);
     } else {
         console.log(msgPadrao);
     }    
 }
 
-let comidas = ["batata frita", "hamburguer", "pizza", "hotdog", "lanche de pernil"];
-let buscaComida = "hotdog";
-let msgPadrao = "Não tem hotdog";
-buscarPalavra(comidas, buscaComida, msgPadrao);
+let cardápio = ["batata frita", "hamburguer", "pizza", "hotdog", "lanche de pernil"];
+let alimento = "hotdog";
+let mensagem = "Não tem hotdog";
+buscarPalavra(cardápio, alimento, mensagem);
 
 // Outra forma, mostra o elemento em um array ->>>
 function buscarPalavra(comidas, buscaComida, msgPadrao) {
@@ -160,7 +160,7 @@ function buscarPalavra(comidas, buscaComida, msgPadrao) {
     let encontrouComida = false;
     for(let i = 0; i < comidas.length; i++) {
         if (comidas[i] === buscaComida) {
-            resultadoBuscaComida.push(comidas[i]); // Corrigido para array[i], não array
+            resultadoBuscaComida.push(comidas[i]);
             encontrouComida = true;
         } 
     }
@@ -170,8 +170,8 @@ function buscarPalavra(comidas, buscaComida, msgPadrao) {
     return resultadoBuscaComida;
 }
 
-let comidas = ["batata frita", "hamburguer", "pizza", "hotdog", "lanche de pernil"];
-let buscaComida = "hotdog";
-let msgPadrao = "Não tem hotdog";
-let resultadoBuscaComida = buscarPalavra(comidas, buscaComida, msgPadrao);
+let comidas2 = ["batata frita", "hamburguer", "pizza", "hotdog", "lanche de pernil"];
+let buscaComida2 = "hotdog";
+let msgPadrao2 = "Não tem hotdog";
+let resultadoBuscaComida = buscarPalavra(comidas2, buscaComida2, msgPadrao2);
 console.log(resultadoBuscaComida);
