@@ -41,6 +41,7 @@ function verificarPalindromo() {
 
     for(let i = palavra.length - 1; i >= 0; i--) { 
         invertida = invertida + palavra [i]
+        console.log(invertida);
     }
 
     if (invertida === palavra) {
@@ -92,10 +93,7 @@ console.log(menorNumero(lista5));
 
 // # Exercício 6: Escreva uma função que calcule a média dos números em um array. [7.0, 8.0, 9.0] -> (7.0 + 8.0 + 9.0) / 3
 // Raciocínio: Mesmo raciocínio do exercício 2, complementando com: após chegar no comprimento total do array e somar todos os índices, dividir pelo tamanho total do array para mostrar a média.
-function calcularMedia() {
-    let nota = [8.5, 3.6, 2.8, 4.5, 9.7];
-    let somaNotas = nota[0];
-      
+function calcularMedia() {    
     for(let i = 1; i < nota.length; i++) {
         somaNotas = somaNotas + nota[i];
     }
@@ -105,6 +103,8 @@ function calcularMedia() {
     console.log(resultMedia.toFixed(2));
 }
 
+let nota = [8.5, 3.6, 2.8, 4.5, 9.7]; //corrigido
+let somaNotas = nota[0]; //corrigido
 calcularMedia();
 
 // # Exercício 7: Escreva uma função que conte a frequência de cada caractere em uma string. Dica: use objetos para guardar as contagens de cada caractere.
